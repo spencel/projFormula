@@ -34,12 +34,16 @@ function main() {
 		var Preview = {
 			makeVisible: function () {
 				jQuery( "body" ).css({ "visibility": "visible" });
+			},
+			getMjxCharElements: function () {
+
 			}
 		}
 
 		MathJax.Hub.Queue(
 			[ "Typeset", MathJax.Hub, "MathDiv" ],
-			[ "makeVisible", Preview ]
+			[ "makeVisible", Preview ],
+			[ "getElements", Preview ]
 		);
 
 		
